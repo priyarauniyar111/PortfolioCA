@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6 z-10 w-full">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
 
-          {/* LEFT: Text */}
+          {/* LEFT */}
           <div className="flex-1 text-center lg:text-left">
 
             <motion.div
@@ -81,47 +81,30 @@ export default function Hero() {
               Building scalable and impactful web applications — one commit at a time.
             </motion.p>
 
-            {/* CTAs */}
+            {/* CTAs — no motion wrappers here */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.55 }}
-              >
-                <Link to="projects" smooth duration={600}>
-                  <button
-                    className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-medium font-body text-sm text-white transition-all duration-300 hover:scale-105 hover:shadow-lg group"
-                    style={{ background: 'linear-gradient(135deg, #7c3aed, #06b6d4)' }}
-                  >
-                    View Projects
-                    <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </Link>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.62 }}
-              >
-                
-                  href="https://drive.google.com/uc?export=download&id=1UX-0GvtpJV4-x_3Q31SztKCisI6aQDDJ"
-                  download
-                  className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-medium font-body text-sm text-text border border-border hover:border-accent/50 transition-all duration-300 hover:scale-105 glass"
+              <Link to="projects" smooth={true} duration={600}>
+                <button
+                  className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-medium font-body text-sm text-white transition-all duration-300 hover:scale-105 hover:shadow-lg group"
+                  style={{ background: 'linear-gradient(135deg, #7c3aed, #06b6d4)' }}
                 >
-                  <FiDownload className="text-accent2" />
-                  Download CV
-                </a>
-              </motion.div>
+                  View Projects
+                  <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
+
+              
+                href="https://drive.google.com/uc?export=download&id=1UX-0GvtpJV4-x_3Q31SztKCisI6aQDDJ"
+                download="Priya_Rauniyar_CV"
+                className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-medium font-body text-sm text-text border border-border hover:border-accent/50 transition-all duration-300 hover:scale-105 glass"
+              >
+                <FiDownload className="text-accent2" />
+                Download CV
+              </a>
             </div>
 
             {/* Social Links */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
-              className="flex items-center justify-center lg:justify-start gap-5"
-            >
+            <div className="flex items-center justify-center lg:justify-start gap-5">
               {[
                 { icon: FiGithub, href: 'https://github.com/priyarauniyar111', label: 'GitHub' },
                 { icon: FiLinkedin, href: 'https://www.linkedin.com/in/priya--rauniyar/', label: 'LinkedIn' },
@@ -138,7 +121,7 @@ export default function Hero() {
                   <Icon size={18} />
                 </a>
               ))}
-            </motion.div>
+            </div>
 
           </div>
 
