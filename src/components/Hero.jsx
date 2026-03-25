@@ -143,7 +143,7 @@ export default function Hero() {
             <img
               src={priyaImg}
               alt="Priya Rauniyar"
-              className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full object-cover"
+              className="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full object-cover object-top"
             />
           </motion.div>
 
