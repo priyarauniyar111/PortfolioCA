@@ -164,7 +164,7 @@ export default function Hero() {
                 {/* Inner glass ring */}
                 <div className="p-1 rounded-full glass">
                   <img
-                    src="/your-photo.jpg"   {/* 👈 Replace with your image path or URL */}
+                    src="priya.jpeg"   {/* 👈 Replace with your image path or URL */}
                     alt="Priya Rauniyar"
                     className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full object-cover object-top"
                   />
