@@ -9,18 +9,21 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden grid-bg pt-20"
     >
-      {/* Decorative blurs */}
-      <div className="absolute top-1/4 -left-32 w-80 h-80 rounded-full opacity-20"
-        style={{ background: 'radial-gradient(circle, #7c3aed 0%, transparent 70%)' }} />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full opacity-15"
-        style={{ background: 'radial-gradient(circle, #06b6d4 0%, transparent 70%)' }} />
+      <div
+        className="absolute top-1/4 -left-32 w-80 h-80 rounded-full opacity-20"
+        style={{ background: 'radial-gradient(circle, #7c3aed 0%, transparent 70%)' }}
+      />
+      <div
+        className="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full opacity-15"
+        style={{ background: 'radial-gradient(circle, #06b6d4 0%, transparent 70%)' }}
+      />
 
       <div className="max-w-6xl mx-auto px-6 z-10 w-full">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
 
-          {/* LEFT: Text content */}
+          {/* LEFT: Text */}
           <div className="flex-1 text-center lg:text-left">
-            {/* Badge */}
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -31,7 +34,6 @@ export default function Hero() {
               <span className="section-label text-accent2">Open to opportunities</span>
             </motion.div>
 
-            {/* Name */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -47,7 +49,6 @@ export default function Hero() {
               </h1>
             </motion.div>
 
-            {/* Typing animation */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -58,14 +59,10 @@ export default function Hero() {
               <div className="font-mono text-lg sm:text-xl font-medium" style={{ color: '#06b6d4' }}>
                 <TypeAnimation
                   sequence={[
-                    'MERN Stack Apps',
-                    2000,
-                    'Responsive UIs',
-                    2000,
-                    'RESTful APIs',
-                    2000,
-                    'Real-time Systems',
-                    2000,
+                    'MERN Stack Apps', 2000,
+                    'Responsive UIs', 2000,
+                    'RESTful APIs', 2000,
+                    'Real-time Systems', 2000,
                   ]}
                   wrapper="span"
                   speed={50}
@@ -75,7 +72,6 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Tagline */}
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -86,31 +82,38 @@ export default function Hero() {
             </motion.p>
 
             {/* CTAs */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.55 }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10"
-            >
-              <Link to="projects" smooth duration={600}>
-                <button
-                  className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-medium font-body text-sm text-white transition-all duration-300 hover:scale-105 hover:shadow-lg group"
-                  style={{ background: 'linear-gradient(135deg, #7c3aed, #06b6d4)' }}
-                >
-                  View Projects
-                  <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-                </button>
-              </Link>
-
-              
-                href="https://drive.google.com/uc?export=download&id=1UX-0GvtpJV4-x_3Q31SztKCisI6aQDDJ"
-                download
-                className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-medium font-body text-sm text-text border border-border hover:border-accent/50 transition-all duration-300 hover:scale-105 glass"
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.55 }}
               >
-                <FiDownload className="text-accent2" />
-                Download CV
-              </a>
-            </motion.div>
+                <Link to="projects" smooth duration={600}>
+                  <button
+                    className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-medium font-body text-sm text-white transition-all duration-300 hover:scale-105 hover:shadow-lg group"
+                    style={{ background: 'linear-gradient(135deg, #7c3aed, #06b6d4)' }}
+                  >
+                    View Projects
+                    <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </Link>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.62 }}
+              >
+                
+                  href="https://drive.google.com/uc?export=download&id=1UX-0GvtpJV4-x_3Q31SztKCisI6aQDDJ"
+                  download
+                  className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-medium font-body text-sm text-text border border-border hover:border-accent/50 transition-all duration-300 hover:scale-105 glass"
+                >
+                  <FiDownload className="text-accent2" />
+                  Download CV
+                </a>
+              </motion.div>
+            </div>
 
             {/* Social Links */}
             <motion.div
@@ -136,6 +139,7 @@ export default function Hero() {
                 </a>
               ))}
             </motion.div>
+
           </div>
 
           {/* RIGHT: Photo */}
@@ -146,13 +150,10 @@ export default function Hero() {
             className="flex-shrink-0 flex items-center justify-center"
           >
             <div className="relative">
-              {/* Glow behind photo */}
               <div
                 className="absolute inset-0 rounded-full blur-2xl opacity-30 scale-110"
                 style={{ background: 'radial-gradient(circle, #7c3aed 0%, #06b6d4 100%)' }}
               />
-
-              {/* Gradient border ring */}
               <div
                 className="relative p-[3px] rounded-full"
                 style={{
@@ -161,17 +162,15 @@ export default function Hero() {
                   animation: 'gradientShift 4s ease infinite',
                 }}
               >
-                {/* Inner glass padding */}
                 <div className="p-1 rounded-full glass">
                   <img
-                    src="priya.jpeg"
+                    src="/your-photo.jpg"
                     alt="Priya Rauniyar"
                     className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full object-cover object-top"
                   />
                 </div>
               </div>
 
-              {/* Floating badge - stack */}
               <motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
@@ -180,7 +179,6 @@ export default function Hero() {
                 <span className="text-xs font-mono text-accent2">⚡ MERN Stack</span>
               </motion.div>
 
-              {/* Floating badge - availability */}
               <motion.div
                 animate={{ y: [0, 6, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
