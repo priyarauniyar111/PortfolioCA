@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
 import { Link } from 'react-scroll'
 import { FiArrowRight, FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
+import priyaImg from './priya.jpeg'
 
 export default function Hero() {
   return (
@@ -140,7 +141,7 @@ export default function Hero() {
             className="flex justify-center"
           >
             <img
-              src="../components/priya.jpeg"
+              src={priyaImg}
               alt="Priya Rauniyar"
               className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full object-cover"
             />
