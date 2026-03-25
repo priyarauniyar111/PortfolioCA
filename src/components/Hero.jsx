@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6 z-10 w-full">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
 
-          {/* ── LEFT: Text content ── */}
+          {/* LEFT: Text content */}
           <div className="flex-1 text-center lg:text-left">
             {/* Badge */}
             <motion.div
@@ -138,21 +138,21 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* ── RIGHT: Photo ── */}
+          {/* RIGHT: Photo */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
             className="flex-shrink-0 flex items-center justify-center"
           >
-            {/* Outer glow ring */}
             <div className="relative">
+              {/* Glow behind photo */}
               <div
                 className="absolute inset-0 rounded-full blur-2xl opacity-30 scale-110"
                 style={{ background: 'radial-gradient(circle, #7c3aed 0%, #06b6d4 100%)' }}
               />
 
-              {/* Animated border ring */}
+              {/* Gradient border ring */}
               <div
                 className="relative p-[3px] rounded-full"
                 style={{
@@ -161,17 +161,17 @@ export default function Hero() {
                   animation: 'gradientShift 4s ease infinite',
                 }}
               >
-                {/* Inner glass ring */}
+                {/* Inner glass padding */}
                 <div className="p-1 rounded-full glass">
                   <img
-                    src="priya.jpeg"   {/* 👈 Replace with your image path or URL */}
+                    src="priya.jpeg"
                     alt="Priya Rauniyar"
                     className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full object-cover object-top"
                   />
                 </div>
               </div>
 
-              {/* Floating badge — experience or stack */}
+              {/* Floating badge - stack */}
               <motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
@@ -180,7 +180,7 @@ export default function Hero() {
                 <span className="text-xs font-mono text-accent2">⚡ MERN Stack</span>
               </motion.div>
 
-              {/* Floating badge — availability */}
+              {/* Floating badge - availability */}
               <motion.div
                 animate={{ y: [0, 6, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
@@ -211,7 +211,6 @@ export default function Hero() {
         />
       </motion.div>
 
-      {/* Gradient shift keyframe */}
       <style>{`
         @keyframes gradientShift {
           0% { background-position: 0% 50%; }
