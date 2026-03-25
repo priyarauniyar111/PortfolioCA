@@ -22,7 +22,7 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6 z-10 w-full">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
 
-          {/* LEFT */}
+          {/* LEFT SIDE */}
           <div className="flex-1 text-center lg:text-left">
 
             {/* Status */}
@@ -33,7 +33,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-accent/20 mb-8"
             >
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              <span className="section-label text-accent2">Open to opportunities</span>
+              <span className="text-accent2 text-sm">Open to opportunities</span>
             </motion.div>
 
             {/* Name */}
@@ -42,25 +42,25 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h1 className="font-display font-bold leading-none mb-4">
-                <span className="block text-5xl sm:text-7xl lg:text-8xl text-text mb-2">
+              <h1 className="font-bold leading-none mb-4">
+                <span className="block text-5xl sm:text-7xl lg:text-8xl mb-2">
                   Priya
                 </span>
-                <span className="block text-5xl sm:text-7xl lg:text-8xl grad-text">
+                <span className="block text-5xl sm:text-7xl lg:text-8xl text-purple-500">
                   Rauniyar
                 </span>
               </h1>
             </motion.div>
 
-            {/* Typing */}
+            {/* Typing Animation */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex items-center justify-center lg:justify-start gap-3 mb-6"
             >
-              <span className="text-muted font-body text-lg sm:text-xl">I build</span>
-              <div className="font-mono text-lg sm:text-xl font-medium text-cyan-400">
+              <span className="text-gray-400 text-lg">I build</span>
+              <div className="text-lg font-medium text-cyan-400">
                 <TypeAnimation
                   sequence={[
                     'MERN Stack Apps', 2000,
@@ -68,11 +68,10 @@ export default function Hero() {
                     'RESTful APIs', 2000,
                     'Real-time Systems', 2000,
                   ]}
-                  wrapper="span"
                   speed={50}
                   repeat={Infinity}
                 />
-                <span className="blink ml-1 text-accent">|</span>
+                <span className="ml-1">|</span>
               </div>
             </motion.div>
 
@@ -81,7 +80,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.45 }}
-              className="font-body text-muted text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-10"
+              className="text-gray-400 max-w-xl mx-auto lg:mx-0 mb-10"
             >
               Building scalable and impactful web applications — one commit at a time.
             </motion.p>
@@ -90,8 +89,9 @@ export default function Hero() {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-10">
 
               {/* View Projects */}
-              <Link to="projects" smooth duration={600}>
-                <button className="flex items-center gap-2 px-7 py-3.5 rounded-xl text-white hover:scale-105 transition"
+              <Link to="projects" smooth={true} duration={600}>
+                <button
+                  className="flex items-center gap-2 px-7 py-3.5 rounded-xl text-white hover:scale-105 transition"
                   style={{ background: 'linear-gradient(135deg, #7c3aed, #06b6d4)' }}
                 >
                   View Projects
@@ -103,7 +103,7 @@ export default function Hero() {
               <a
                 href="https://drive.google.com/uc?export=download&id=1UX-0GvtpJV4-x_3Q31SztKCisI6aQDDJ"
                 download="Priya_Rauniyar_CV"
-                className="flex items-center gap-2 px-7 py-3.5 rounded-xl border hover:scale-105 transition glass"
+                className="flex items-center gap-2 px-7 py-3.5 rounded-xl border hover:scale-105 transition"
               >
                 <FiDownload />
                 Download CV
@@ -123,7 +123,7 @@ export default function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                   title={label}
-                  className="w-10 h-10 flex items-center justify-center border rounded-xl hover:scale-110 transition"
+                  className="w-10 h-10 rounded-xl flex items-center justify-center border hover:scale-110 transition"
                 >
                   <Icon size={18} />
                 </a>
@@ -132,16 +132,17 @@ export default function Hero() {
 
           </div>
 
-          {/* RIGHT IMAGE */}
+          {/* RIGHT SIDE IMAGE */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
+            className="flex justify-center"
           >
             <img
               src="/your-photo.jpg"
-              alt="Priya"
-              className="w-64 h-64 rounded-full object-cover"
+              alt="Priya Rauniyar"
+              className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full object-cover"
             />
           </motion.div>
 
