@@ -140,7 +140,7 @@ export default function Hero() {
             className="flex justify-center"
           >
             <img
-              src="src/components/priya.jpeg"
+              src="./components/priya.jpeg"
               alt="Priya Rauniyar"
               className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full object-cover"
             />
